@@ -1,7 +1,7 @@
 function renderChart(point) {
     Highcharts.chart('hc-tooltip', {
         chart: {
-            type: 'column'
+            type: 'pie'
         },
         title: {
             text: null
@@ -10,7 +10,10 @@ function renderChart(point) {
             text: 'Chart inside tooltip'
         },
         series: [{
-            data: point.options.eData
+            data: point.options.eData,
+            dataLabels: {
+                enabled: false
+            }
         }]
     });
 }
@@ -37,13 +40,13 @@ Highcharts.chart('container', {
         type: 'line',
         data: [{
             y: 10,
-            eData: [1, 2, 3]
+            eData: [1, 2, 3, 4, 5]
         }, {
             y: 5,
-            eData: [-10, 20, 50]
+            eData: [-10, 20, 50, 70, 20]
         }, {
             y: 2,
-            eData: [103, 11]
+            eData: [103, 11, 12, 54, 68]
         }]
     }]
 });
