@@ -9,9 +9,9 @@ Here you can find a [demo](https://jsfiddle.net/gh/get/library/pure/highcharts/h
 
 ## There are four steps to create the chart inside a tooltip:
 
-###### 1. Be sure to set useHTML to true and return the replaced HTML tooltip element in the tooltip.pointFormat. Create the rendering function as follow:
+#### 1. Be sure to set useHTML to true and return the replaced HTML tooltip element in the tooltip.pointFormat. Create the rendering function as follow:
 
-###### 2. Create the rendering function as follow:
+#### 2. Create the rendering function as follow:
 
 ```js
 function renderChart(point) {
@@ -32,7 +32,7 @@ function renderChart(point) {
 }
 ```
 
-###### 3.Then, on the tooltip event, I call the renderChart function for individual points of the main chart:
+#### 3. Then, on the tooltip event, I call the renderChart function for individual points of the main chart:
 
 ```js
 Highcharts.addEvent(
@@ -44,7 +44,7 @@ Highcharts.addEvent(
 )
 ```
 
-###### 4. Finally, in the main chart object the tooltip.pointFormat gets the following code:
+#### 4. Finally, in the main chart object the tooltip.pointFormat gets the following code:
 
 ```js
  tooltip: {
